@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Azaléas - Condomínio Inteligente</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb", // Deep blue from the UI accents
+              "background-light": "#f8fafc",
+              "background-dark": "#0f172a",
+              "accent-orange": "#f97316",
+              "accent-green": "#22c55e",
+              "accent-cyan": "#06b6d4",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              'xl': '1.5rem',
+              '2xl': '2.5rem',
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+<img alt="Azaleas Logo" class="w-6 h-6 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBghH-XE_hyYCAAbgPT0BIUCzHJkqrJLYmwKL1deI-GvfhfrhahgoNJHSqYvBUTnJRGCrzQLhv200gM6BzmzXIVsKNBYTd6LMT1YAMotdwXXtvfjmLy_zGjZLKezDUvUDLNMGqe2flORXyjfYZPzvYjLXZvarVngM--RsMyBcUc0g2uy7pz6xxixRjsEp2RtQh7HWQkbcjTxiiYIH4jrIbi3iQGj9qHYmuMqOwMKvUtA8QumykDSOS5bpC4dI2XLvU9KsiWXmBSjuSY"/>
+</div>
+<span class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">Azaléas</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium">
+<a class="hover:text-primary transition-colors" href="#beneficios">Benefícios</a>
+<a class="hover:text-primary transition-colors" href="#operacao">Operação</a>
+<a class="hover:text-primary transition-colors" href="#solucao">Solução</a>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined block dark:hidden text-slate-600">dark_mode</span>
+<span class="material-icons-outlined hidden dark:block text-slate-400">light_mode</span>
+</button>
+<a class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg active:scale-95" href="login.html">
+                    Entrar
+                </a>
+</div>
+</div>
+</nav>
+<section class="relative pt-44 pb-24 overflow-hidden">
+<div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-bl from-blue-50 to-transparent dark:from-blue-900/10 opacity-70"></div>
+<div class="absolute -top-24 -left-24 -z-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-400 rounded-full text-sm font-semibold">
+<span class="material-icons-outlined text-sm">auto_awesome</span>
+                    Gestão Inteligente 4.0
+                </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] text-slate-900 dark:text-white">
+                    A tranquilidade do seu condomínio <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">na palma da mão.</span>
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+                    O painel de controle definitivo para síndicos: monitore gás, energia solar, portaria e limpeza em tempo real, sem microgerenciamento e sem complicações.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary text-white text-lg font-bold px-10 py-5 rounded-2xl flex items-center justify-center gap-2 shadow-xl shadow-blue-500/20 hover:bg-blue-700 hover:-translate-y-1 transition-all group" href="operacao.html">
+                        Ver Demonstração
+                        <span class="material-icons-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 text-lg font-bold px-10 py-5 rounded-2xl flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all" href="#">
+                        Falar com Consultor
+                    </a>
+</div>
+<div class="flex items-center gap-6 pt-8 border-t border-slate-200 dark:border-slate-800">
+<div class="flex -space-x-3">
+<img alt="User 1" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBy2bRYydojk8nT8wXSINx3ihT081mWImcWSiDNO1EHPkmhg79XW_gXH-S8FjaIRRXlUB50V98ca_lnNMCgHCUKbWMxuX4wcasCvhQPmHJ7IA9vOvEzigWFynu7ClNX6OPtdFip25N0nCVSGT0lzx3YTHrSzwH4DQKti5RHBqjf1JZ0V_gbeN2OsmdODeRhW5TH612b6rdJf4qQ54xMfPG5CDgIWLoRHbli0vlGYNxLfEgEmk1oeV_ff_g2MflLZoGw3R87Nr6U9MF"/>
+<img alt="User 2" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-kI_VtObmwBxQ1zLYO5CUSKjo4sH3ickB_uHptbVkZH6zXJI0F8SLA0gzmqEw7iUsv7cvvzni-PwdgAEVtPpJi81MRDABlHroisBL4LQUP4DJJjxvbU825vdwFhfwPXI_wvX6osmi-py78M1jHENiLColVEYej1BPzY3MwQ3awpMyar1DGDCs-Pgsu0s4Y0WkW6UQdrRm5NfOrsmBMuwkNIKH_7F5Np_QzVqY7NAGqnx9aTN57GSK7_A-ElTrkszOOiE3aZar3d2M"/>
+<img alt="User 3" class="w-10 h-10 rounded-full border-2 border-white dark:border-slate-900 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbvXntqAwhu2fDL3XOQnxWDf0ykz1GvSGExhoGa9KjA2h6_L1218TeLCVbLOaPY1mhGUICEHv7Y5Z79sHu1iQMyfY9Csa8LKGsVpN802pFxKj3E6WBOkjH0qL_wZHp_ywuF5jm0W2Zbk4uXfVEwwj60BuWcF5sRNkk7HvzAeU8h0HTe_JDVMUKXKFUqiiUl09p6-yj1GEQ7OV_PJd93ShvDQazFyfzayu26pTZSYlU933nhMhN_jqQvncTuX_tnSgHy8cS04-GaM4l"/>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-500 font-medium">
+                        +500 síndicos otimizando sua rotina
+                    </p>
+</div>
+</div>
+<div class="relative">
+<div class="glass-card rounded-2xl shadow-2xl p-6 relative overflow-hidden ring-1 ring-slate-200 dark:ring-slate-700 transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<img alt="Admin Profile" class="w-12 h-12 rounded-full border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-7WU7W-ZD69FUQU5Dg2Lyv7P7yBSQ_r5yjrOyKgdpnGPE732ptJF9XkrPOGoX0qmW52UbK0wRBw1r0Rxo0DxmhkUlpQbDUFI6EbTw3thELwwd5OPXqZWZkckbdJ5dPAA9jxlhAj9frlc8hbIW0-AVBnbiMMdI_OvqZa8L4GSyhcU-gYMN4DWcdtTi_b6zKHrSDFmwIN9eNaA8KuTEqY0SpEA3QZpwNLipigfwCy7PZc3Ej47EBEEQpwF-kAy8YI4BF3VByMwHyUQ"/>
+<div>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Olá, Renato Dev</p>
+<div class="flex items-center gap-1.5 text-accent-green text-[10px] font-bold">
+<span class="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+                                    SISTEMA ONLINE
+                                </div>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="bg-blue-50 dark:bg-blue-900/30 p-2 rounded-lg text-primary">
+<span class="material-icons-outlined">notifications</span>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg text-slate-500">
+<span class="material-icons-outlined">settings</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 text-accent-orange rounded-xl flex items-center justify-center mb-4">
+<span class="material-icons-outlined">local_fire_department</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white">Monitoramento Gás</h3>
+<div class="mt-4 w-full bg-white dark:bg-slate-700 py-3 rounded-xl border border-slate-200 dark:border-slate-600 shadow-sm">
+<p class="text-[10px] text-slate-400 font-bold uppercase">Nível Médio</p>
+<p class="text-xl font-extrabold text-slate-900 dark:text-white">65%</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 text-accent-green rounded-xl flex items-center justify-center mb-4">
+<span class="material-icons-outlined">recycling</span>
+</div>
+<h3 class="font-bold text-slate-900 dark:text-white">Reciclados</h3>
+<div class="mt-4 w-full bg-primary py-3 rounded-xl shadow-lg shadow-blue-500/20">
+<p class="text-white text-sm font-bold">Acessar Caixa</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-6 glass-card p-4 rounded-xl shadow-xl border border-white/20 hidden md:block animate-bounce duration-[3000ms]">
+<div class="flex items-center gap-3">
+<div class="bg-cyan-100 dark:bg-cyan-900/30 text-accent-cyan p-2 rounded-lg">
+<span class="material-icons-outlined">wb_sunny</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500">Energia Solar</p>
+<p class="font-extrabold text-slate-900 dark:text-white">+12.4 kWh</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300" id="beneficios">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-sm font-extrabold text-primary uppercase tracking-[0.2em]">Experiência Azaléas</h2>
+<h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white">Gestão que trabalha por você</h3>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                    Sua rotina como síndico não precisa ser um bombeamento constante de crises. Tenha controle passivo e eficiente.
+                </p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
+<div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/20 text-accent-orange rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">insights</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Fim das Surpresas</h4>
+<p class="text-slate-600 dark:text-slate-400">Monitoramento preditivo de gás e solar. Saiba antes do problema acontecer.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-green-500/50 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+<div class="w-14 h-14 bg-green-100 dark:bg-green-900/20 text-accent-green rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">fact_check</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Auditoria Passiva</h4>
+<p class="text-slate-600 dark:text-slate-400">Status de limpeza e manutenção em tempo real sem precisar cobrar ninguém.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300">
+<div class="w-14 h-14 bg-cyan-100 dark:bg-cyan-900/20 text-accent-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">vpn_key</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Portaria Blindada</h4>
+<p class="text-slate-600 dark:text-slate-400">Controle de acesso 100% digital, rastreável e auditável a qualquer momento.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-background-light dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+<div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/20 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">payments</span>
+</div>
+<h4 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Receita Transparente</h4>
+<p class="text-slate-600 dark:text-slate-400">Gestão simplificada do caixa de recicláveis com prestação de contas automática.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/30" id="operacao">
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<img alt="Modern Building Interface" class="rounded-[2.5rem] shadow-2xl border-8 border-white dark:border-slate-800 object-cover aspect-square lg:aspect-video" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRm6mkAf8L36CtYbgGJZo8cCwbW6rprPp-JR0JYTtAiGixBcgeHGnlWUtR-AksMFAA8x4qBnEkAoPdCQk5BuK4jKLWr9eQRDEW8C6B8CKoFjMt_4CrQKTbXsMHAN1Juv3jOlfCybZj3itUqI5jlw9nAI1moL1joan2gjHHI4Z1lVDFg0WHumPPEOpIICqhLsu9lhSgAo2jtvTC1C5-udvf46U1f4zz24LlNlC_gGaVZuPPFBFxMXHaAc8YMuw6eOs9rXuMKCB4UsG7"/>
+</div>
+<div class="space-y-10">
+<div class="space-y-4">
+<h2 class="text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">Por que Azaléas é diferente de tudo o que você já viu?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Nós não somos um software de contabilidade. Somos o seu olho digital na operação do dia a dia.</p>
+</div>
+<div class="space-y-6">
+<div class="flex gap-5">
+<div class="mt-1 w-10 h-10 flex-shrink-0 bg-white dark:bg-slate-800 rounded-lg shadow-sm flex items-center justify-center text-primary border border-slate-100 dark:border-slate-700">
+<span class="material-icons-outlined">sensors_off</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Zero Hardware Caro</h4>
+<p class="text-slate-600 dark:text-slate-400">Esqueça investimentos de milhares de reais em sensores proprietários. Usamos o que seu prédio já tem ou soluções 100% digitais.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="mt-1 w-10 h-10 flex-shrink-0 bg-white dark:bg-slate-800 rounded-lg shadow-sm flex items-center justify-center text-primary border border-slate-100 dark:border-slate-700">
+<span class="material-icons-outlined">engineering</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Foco no Operativo</h4>
+<p class="text-slate-600 dark:text-slate-400">Enquanto outros focam no boleto, nós focamos se o zelador terminou a manutenção e se o reservatório de gás está vazio.</p>
+</div>
+</div>
+<div class="flex gap-5">
+<div class="mt-1 w-10 h-10 flex-shrink-0 bg-white dark:bg-slate-800 rounded-lg shadow-sm flex items-center justify-center text-primary border border-slate-100 dark:border-slate-700">
+<span class="material-icons-outlined">touch_app</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Interface Humana</h4>
+<p class="text-slate-600 dark:text-slate-400">Criado especificamente para que porteiros e faxineiros possam operar com um clique, sem precisar de treinamento técnico.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-slate-950" id="solucao">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-slate-50 dark:bg-slate-900 rounded-[2.5rem] p-1 shadow-inner ring-1 ring-slate-200 dark:ring-slate-800">
+<div class="bg-white dark:bg-slate-900 rounded-[2.2rem] overflow-hidden shadow-2xl">
+<div class="p-8 border-b border-slate-100 dark:border-slate-800 flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-gradient-to-tr from-yellow-400 to-red-500 rounded-full flex items-center justify-center shadow-lg mb-6 ring-4 ring-white dark:ring-slate-800">
+<img alt="Logo Large" class="w-14 h-14 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLIQGckh-Iw6NNnphkKWzuD3b9d5FqBnWKpfzAIEWwIiA9LH1QiKmQy-TrpAaLWmlHsWbSgCmlaLhNWNrz6d0MwtUoQcpmJG7pxso8zEB3TMeTSr-9-cf0vv-YyEjrA68OTZMars5MHlU5wbz8E-uP1YvECypaZgLAr2B4R-C0bJRlx1DDJC7V6RZ0ccPAoco01rJMMicI2PA3xYTgxkcz1RCSI7XpPq3RLcKfYWcWiP-LmClKwJPEVRblGz0AIuduyOYHr4hud-_P"/>
+</div>
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Azaléas</h2>
+<p class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-1">CONDOMÍNIO INTELIGENTE</p>
+<div class="flex bg-slate-100 dark:bg-slate-800 p-1.5 rounded-2xl mt-8 w-full max-w-sm">
+<button class="flex-1 py-3 px-4 bg-white dark:bg-slate-700 shadow-md rounded-xl text-slate-900 dark:text-white font-bold text-sm">Equipe</button>
+<button class="flex-1 py-3 px-4 text-slate-400 dark:text-slate-500 font-bold text-sm">Administração</button>
+</div>
+</div>
+<div class="p-8 space-y-8 bg-slate-50/50 dark:bg-slate-900/50">
+<div class="text-center">
+<p class="text-xs font-extrabold text-slate-400 uppercase tracking-widest">Selecione seu nome e cargo</p>
+</div>
+<div class="flex items-center gap-3 text-primary dark:text-blue-400">
+<div class="p-1.5 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+<span class="material-icons-outlined text-sm">assignment</span>
+</div>
+<span class="text-xs font-extrabold uppercase tracking-wider">Limpeza &amp; Manutenção</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<img alt="Renato" class="w-16 h-16 rounded-full border-4 border-slate-50 dark:border-slate-700 mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhbSPhU8o5ZM9IBlSez7ZMrFA_TtbAKPVEDkIbhAQajDe1CkpJjO8iK84zsgH9ib1GBPfdq1Npqu4aE8BD4cihylGSgbZmGnZ6Rti4jZHylpKRWydjlf2h8c0Hd1Qtd55KtzbnqfAUrxuYb1wgROLJbt0s5Ut2NKu_EGabhhwGraESH0sT0RJSGppzra5cXJgskmELrB1inhj9zZcy1MYl5XStVhVwPQAuDQq5BpBfDkA6zZtC17mXtPwHSzU1CitKi1Q93yIlVYFW"/>
+<p class="font-bold text-slate-900 dark:text-white">Renato</p>
+<p class="text-[10px] text-slate-400 font-bold uppercase">ZELADOR</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<img alt="Gislene" class="w-16 h-16 rounded-full border-4 border-slate-50 dark:border-slate-700 mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-uOAgMVTsr4O-lbG3zpw5rbPfKdL8mXPgO3HXYt9thXdDhYKqF7H6GQvgx0WWWmGP4eAfiRK5Qeoz2L6RP11DDseTF3t5w-DbdGI_p8NqxK68mgIN3z2_h7FZZzhnRDU8OiBOHTBixrV-7Vjx-jnNq0eMG5sd-ur564xupbYH2zBLfyLXdIR6DrRxu_LHceHIFz5zH_hxe12ZK_exisVH4mPMaUfP3F2rbWtBgZFAR1CQiHnv5dIqlexQnJNVVHFNOg0QuqJ5M8RR"/>
+<p class="font-bold text-slate-900 dark:text-white">Gislene</p>
+<p class="text-[10px] text-slate-400 font-bold uppercase">FAXINEIRA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative overflow-hidden">
+<div class="max-w-5xl mx-auto bg-primary dark:bg-blue-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Modernize sua gestão <br class="hidden md:block"/> hoje mesmo
+                </h2>
+<p class="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+                    Junte-se a centenas de síndicos que trocaram planilhas e estresse por transparência e automação.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
+<a class="w-full sm:w-auto bg-white text-primary text-xl font-extrabold px-12 py-6 rounded-2xl shadow-xl hover:scale-105 transition-transform active:scale-95" href="#">
+                        Quero Implementar no Meu Prédio
+                    </a>
+</div>
+<p class="text-blue-200 text-sm font-medium">
+                    Sem taxa de instalação. Implementação em até 48 horas.
+                </p>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 text-sm">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 bg-gradient-to-tr from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
+<img alt="Azaleas Logo Small" class="w-4 h-4 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaHVNZkKFhmraqvaScF1ITm17yTJ4epWJ4nyDv7kxhOuV-h4gsuoVuP7PeiU6Fk8yQy2pZu_GoR9mJokPTOPoIiINzU8C_OIE4EiqJEsaHpq7RXtgwesNkpLwpx8D5_pQG9SOfLiDq01rLTdlX7m11KuApAygvJ0JJ2LOVJhZ9yvIjQVNmUrG0tWgdWu3cRPVjzp7DKbbCCMSM-xg9kyblXUAlT8cJj8EOreNIVOOyq0exwdO43QQ-xThkPsjVznV5AU_0kPKe0jqE"/>
+</div>
+<span class="font-extrabold text-slate-900 dark:text-white">Azaléas</span>
+<span class="ml-4">© 2024 Condomínio Inteligente S.A.</span>
+</div>
+<div class="flex gap-8 font-medium">
+<a class="hover:text-primary transition-colors" href="#">Termos</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Suporte</a>
+</div>
+<div class="flex gap-4">
+<a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="#">
+<span class="material-icons-outlined text-xl">language</span>
+</a>
+<a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="#">
+<span class="material-icons-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+
+</body></html>

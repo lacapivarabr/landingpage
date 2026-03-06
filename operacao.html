@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Azaléas - Operação e Solução</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb",
+            "background-light": "#ffffff",
+            "background-dark": "#0f172a",
+            "accent-orange": "#f97316",
+            "accent-green": "#22c55e",
+            "accent-cyan": "#06b6d4",
+          },
+          fontFamily: {
+            display: ["Plus Jakarta Sans", "sans-serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            'xl': '1.5rem',
+            '2xl': '2.5rem',
+            '3xl': '3.5rem',
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .feature-grid-image {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 bg-gradient-to-tr from-yellow-400 to-red-500 rounded-full flex items-center justify-center shadow-lg">
+          <img alt="Azaleas Logo" class="w-6 h-6 invert"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBghH-XE_hyYCAAbgPT0BIUCzHJkqrJLYmwKL1deI-GvfhfrhahgoNJHSqYvBUTnJRGCrzQLhv200gM6BzmzXIVsKNBYTd6LMT1YAMotdwXXtvfjmLy_zGjZLKezDUvUDLNMGqe2flORXyjfYZPzvYjLXZvarVngM--RsMyBcUc0g2uy7pz6xxixRjsEp2RtQh7HWQkbcjTxiiYIH4jrIbi3iQGj9qHYmuMqOwMKvUtA8QumykDSOS5bpC4dI2XLvU9KsiWXmBSjuSY" />
+        </div>
+        <span class="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">Azaléas</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 font-medium">
+        <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300" href="index.html">Home</a>
+        <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+          href="index.html#operacao">Operação</a>
+        <a class="hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+          href="#funcionalidades">Funcionalidades</a>
+        <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          onclick="document.documentElement.classList.toggle('dark')">
+          <span class="material-symbols-outlined block dark:hidden text-slate-600">dark_mode</span>
+          <span class="material-symbols-outlined hidden dark:block text-slate-400">light_mode</span>
+        </button>
+        <a class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg active:scale-95"
+          href="login.html">
+          Entrar
+        </a>
+      </div>
+    </div>
+  </nav>
+  <header class="relative pt-48 pb-24 bg-white dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 text-center space-y-8">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-400 rounded-full text-sm font-semibold">
+        <span class="material-symbols-outlined text-sm">settings_suggest</span>
+        Operação &amp; Solução
+      </div>
+      <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] text-slate-900 dark:text-white max-w-4xl mx-auto">
+        A central de comando do seu <span class="text-primary">condomínio.</span>
+      </h1>
+      <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+        Veja como o Azaléas simplifica a sua rotina diária através de uma gestão baseada em dados reais e automação
+        inteligente.
+      </p>
+    </div>
+  </header>
+  <main class="space-y-32 pb-32 overflow-hidden" id="funcionalidades">
+    <section class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <div
+            class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 text-accent-orange rounded-2xl flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">energy_savings_leaf</span>
+          </div>
+          <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">Gestão de Gás e Solar</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Acompanhe o consumo e a geração de energia em tempo real. Nossa plataforma integra-se diretamente com os
+            medidores do condomínio para oferecer previsibilidade absoluta.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+              <span class="material-symbols-outlined text-accent-green">check_circle</span>
+              Alertas preditivos de nível baixo de gás.
+            </li>
+            <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+              <span class="material-symbols-outlined text-accent-green">check_circle</span>
+              Dashboard comparativo de geração solar mensal.
+            </li>
+            <li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+              <span class="material-symbols-outlined text-accent-green">check_circle</span>
+              Relatórios automáticos de economia gerada.
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-blue-500/10 to-orange-500/10 rounded-[3rem] blur-2xl">
+          </div>
+          <div
+            class="relative bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 p-8 feature-grid-image">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">analytics</span>
+                Monitoramento Energético
+              </h4>
+              <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Tempo Real</span>
+            </div>
+            <div class="space-y-6">
+              <div class="flex items-end gap-2 h-40">
+                <div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-lg h-[40%]"></div>
+                <div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-lg h-[60%]"></div>
+                <div class="flex-1 bg-primary/40 dark:bg-primary/20 rounded-t-lg h-[85%]"></div>
+                <div class="flex-1 bg-primary/40 dark:bg-primary/20 rounded-t-lg h-[75%]"></div>
+                <div class="flex-1 bg-primary rounded-t-lg h-[95%]"></div>
+                <div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-lg h-[50%]"></div>
+                <div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-t-lg h-[30%]"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                  <p class="text-xs text-slate-400 font-bold uppercase mb-1">Status Gás</p>
+                  <p class="text-xl font-extrabold text-accent-orange">72% <span
+                      class="text-xs font-normal">Estável</span></p>
+                </div>
+                <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                  <p class="text-xs text-slate-400 font-bold uppercase mb-1">Geração Solar</p>
+                  <p class="text-xl font-extrabold text-accent-green">14.2 kWp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative order-2 lg:order-1">
+          <div class="absolute -inset-4 bg-gradient-to-bl from-green-500/10 to-blue-500/10 rounded-[3rem] blur-2xl">
+          </div>
+          <div
+            class="relative mx-auto max-w-[280px] bg-slate-900 rounded-[3rem] p-4 border-[8px] border-slate-800 shadow-2xl">
+            <div class="bg-white dark:bg-slate-950 rounded-[2.2rem] h-[500px] overflow-hidden flex flex-col">
+              <div class="p-6 bg-primary text-white space-y-2">
+                <div class="w-12 h-1 bg-white/20 rounded-full mx-auto mb-4"></div>
+                <p class="text-xs opacity-80 uppercase font-bold tracking-widest">Equipe Operacional</p>
+                <h5 class="text-lg font-bold">Olá, Renato</h5>
+              </div>
+              <div class="p-4 space-y-4 flex-1">
+                <div
+                  class="p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <p class="text-[10px] font-bold text-slate-400 uppercase">Tarefa Pendente</p>
+                  <p class="text-sm font-bold text-slate-800 dark:text-white mt-1">Checklist Limpeza Hall</p>
+                  <button class="w-full mt-3 py-2 bg-primary text-white text-xs font-bold rounded-lg">Iniciar
+                    Agora</button>
+                </div>
+                <div
+                  class="p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+                  <p class="text-[10px] font-bold text-slate-400 uppercase">Acesso</p>
+                  <p class="text-sm font-bold text-slate-800 dark:text-white mt-1">Registrar Visitante</p>
+                  <button class="w-full mt-3 py-2 border border-primary text-primary text-xs font-bold rounded-lg">Abrir
+                    Câmera</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6 order-1 lg:order-2">
+          <div
+            class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-primary rounded-2xl flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">touch_app</span>
+          </div>
+          <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">Foco na Base</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Nossa interface mobile é simplificada ao extremo para a equipe de limpeza e segurança. Eles veem apenas o
+            que precisam executar, garantindo foco total e privacidade.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-1">Zero Treinamento</h4>
+              <p class="text-sm text-slate-500">Ícones grandes e fluxos lineares para fácil adoção.</p>
+            </div>
+            <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-2xl">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-1">Eficiência Máxima</h4>
+              <p class="text-sm text-slate-500">O síndico recebe o status sem precisar cobrar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <div
+            class="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-accent-green rounded-2xl flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">recycling</span>
+          </div>
+          <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">Receita de Recicláveis</h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Transforme o lixo do seu condomínio em transparência e receita extra. Gerencie a venda de recicláveis com
+            total prestação de contas.
+          </p>
+          <div class="space-y-4">
+            <div
+              class="flex gap-4 p-4 border border-slate-100 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+              <span class="material-symbols-outlined text-accent-green">receipt_long</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Transparência Financeira</h4>
+                <p class="text-sm text-slate-500">Registro fotográfico e comprovantes anexados a cada transação.</p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 p-4 border border-slate-100 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+              <span class="material-symbols-outlined text-accent-green">volunteer_activism</span>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Uso Estratégico</h4>
+                <p class="text-sm text-slate-500">Destine os fundos para o bem-estar dos colaboradores ou pequenas
+                  melhorias.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-[3rem] blur-2xl">
+          </div>
+          <div
+            class="relative bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 p-8 feature-grid-image">
+            <div class="flex items-center justify-between mb-8">
+              <h4 class="font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="material-symbols-outlined text-accent-green">account_balance_wallet</span>
+                Extrato de Recicláveis
+              </h4>
+              <div class="text-right">
+                <p class="text-[10px] text-slate-400 font-bold uppercase">Saldo Atual</p>
+                <p class="text-xl font-extrabold text-slate-900 dark:text-white">R$ 1.240,50</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-accent-green rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined">add</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold text-slate-800 dark:text-white">Venda de Papelão</p>
+                    <p class="text-xs text-slate-500">12 Mai, 2024</p>
+                  </div>
+                </div>
+                <p class="font-bold text-accent-green">+ R$ 450,00</p>
+              </div>
+              <div
+                class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-accent-green rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined">add</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold text-slate-800 dark:text-white">Venda de Alumínio</p>
+                    <p class="text-xs text-slate-500">08 Mai, 2024</p>
+                  </div>
+                </div>
+                <p class="font-bold text-accent-green">+ R$ 180,20</p>
+              </div>
+              <div
+                class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-100 dark:border-slate-700 opacity-60">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-slate-200 dark:bg-slate-700 text-slate-500 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">remove</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold text-slate-800 dark:text-white">Café da Equipe</p>
+                    <p class="text-xs text-slate-500">05 Mai, 2024</p>
+                  </div>
+                </div>
+                <p class="font-bold text-slate-600 dark:text-slate-400">- R$ 50,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="py-24 px-6 relative overflow-hidden bg-slate-50 dark:bg-slate-900/50">
+    <div
+      class="max-w-5xl mx-auto bg-primary dark:bg-blue-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-500/20">
+      <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl"></div>
+      <div class="relative z-10 space-y-8">
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          Modernize sua gestão <br class="hidden md:block" /> hoje mesmo
+        </h2>
+        <p class="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+          Junte-se a centenas de síndicos que trocaram planilhas e estresse por transparência e automação inteligente.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
+          <a class="w-full sm:w-auto bg-white text-primary text-xl font-extrabold px-12 py-6 rounded-2xl shadow-xl hover:scale-105 transition-transform active:scale-95"
+            href="#">
+            Quero Implementar no Meu Prédio
+          </a>
+        </div>
+        <p class="text-blue-200 text-sm font-medium">
+          Sem taxa de instalação. Implementação em até 48 horas.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="py-12 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+    <div
+      class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 text-sm">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 bg-gradient-to-tr from-yellow-400 to-red-500 rounded-full flex items-center justify-center">
+          <img alt="Azaleas Logo Small" class="w-4 h-4 invert"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaHVNZkKFhmraqvaScF1ITm17yTJ4epWJ4nyDv7kxhOuV-h4gsuoVuP7PeiU6Fk8yQy2pZu_GoR9mJokPTOPoIiINzU8C_OIE4EiqJEsaHpq7RXtgwesNkpLwpx8D5_pQG9SOfLiDq01rLTdlX7m11KuApAygvJ0JJ2LOVJhZ9yvIjQVNmUrG0tWgdWu3cRPVjzp7DKbbCCMSM-xg9kyblXUAlT8cJj8EOreNIVOOyq0exwdO43QQ-xThkPsjVznV5AU_0kPKe0jqE" />
+        </div>
+        <span class="font-extrabold text-slate-900 dark:text-white">Azaléas</span>
+        <span class="ml-4">© 2024 Condomínio Inteligente S.A.</span>
+      </div>
+      <div class="flex gap-8 font-medium">
+        <a class="hover:text-primary transition-colors" href="#">Termos</a>
+        <a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+        <a class="hover:text-primary transition-colors" href="#">Suporte</a>
+      </div>
+      <div class="flex gap-4">
+        <a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="#">
+          <span class="material-symbols-outlined text-xl">language</span>
+        </a>
+        <a class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:text-primary transition-colors" href="#">
+          <span class="material-symbols-outlined text-xl">alternate_email</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
